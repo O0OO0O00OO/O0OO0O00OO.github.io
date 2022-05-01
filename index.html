@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Page Title</title>
+  	<link rel="icon" type="image/x-icon" href="icon.png">
+	<style>
+		body {background-color: rgb(200,200,200);}
+		h1   {color: white;text-align:center}
+		p    {color: black;}
+		a.problem1:hover,a.porblem1:active{color:red;}
+	</style>
+
+</head>
+
+
+<body>
+	<h1>Homework #3</h1>
+	
+	
+	<p>
+	<b> NOW TIME </b><span id="time"></span>
+	</p>
+
+	<hr><!------------------------------------------------------------------------------------------------->
+
+	<p style="border: 2px solid rgb(25,25,225);">
+	<b>My High School</b><br>
+	<a class="problem1"href="https://www.kshs.kh.edu.tw/index.php?WebID=269">Kaohsiung Municipal Kaohsiung Senior High School</a>
+	</p>
+	
+	<hr><!------------------------------------------------------------------------------------------------->
+
+	<p style="border: 2px solid rgb(225,25,25);">
+	<b>The Department I Major</b><br>
+	<a class="problem1"href="https://web.ee.ntu.edu.tw/">National Taiwan University Department of Electrical Engineering</a>
+	</p>
+    
+	<hr><!------------------------------------------------------------------------------------------------->
+	
+	<p style="border: 2px solid rgb(25,225,25);">
+	<b>My Hobbies</b><br>
+    watch youtube videos------<a href="https://www.youtube.com/"> youtube </a><img src="youtube.png" width="20" height="20" alt="youtube icon"><br>
+    watch anime ------<a href="https://ani.gamer.com.tw/"> ani gamer </a><img src="anigamer.png" width="20" height="20" alt="anigamer icon"><br>
+    enjoy lectures online ------<a href="https://cool.ntu.edu.tw/login/portal"> NTU COOL </a><img src="ntucool.png" width="20" height="20" alt="ntu cool icon"><br>
+    </p>
+	<hr>
+	
+	<img src="photo.png" width=200 height="200">
+	<audio id="player" loop controls muted  autoplay>												<!--cant auto play-->
+    		<source src="bgm.mp3" type="audio/mp3">
+		bad
+	</audio><br>
+
+</body>
+
+<script>
+setInterval(updateTime, 1000);
+function updateTime(){
+	const now = new Date();
+	let year   = now.getFullYear();
+	let month  = now.getMonth()+1;
+	let date   = now.getDate();
+    let hour   = now.getHours();
+    let minute = now.getMinutes();
+    let second = now.getSeconds();
+	document.getElementById("time").innerHTML = month+"-"+date+"-"+year+" "+hour+":"+minute+":"+second;
+}
+</script>
+
+</html>
